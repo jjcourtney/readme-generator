@@ -69,9 +69,19 @@ const promptUser = () => {
   ]);
 };
 
-const createReadmeContent = (inputObject) =>
-  `# ${inputObject.projectName}`;
+const createReadmeContent = (inputObject) =>{
+   const { projectName, installation, usage, credits, license, badges, features, contributionInstructions, tests } = inputObject;
 
+    return  `# ${projectName}
+            ## ${installation}
+            ## ${usage}
+            ## ${credits} 
+            ## ${license}
+            ## ${badges}
+            ## ${features}
+            ## ${contributionInstructions}
+            ## ${tests}`;
+}
 
 const init = () => {
   promptUser()
