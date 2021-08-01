@@ -26,13 +26,14 @@ const createReadmeContent = (inputObject) =>{
 - [Tests](#tests)
 
 ## Installation
-${installation}
+\`\`\`${installation}\`\`\`
 
 ## Usage
 ${usage}
 
 ## License 
-This is covered under ${license}: ${licenses.getLicenseBadge(license)}
+This is covered under ${license}: 
+${licenses.getLicenseBadge(license)}
 
 ## Questions
 
