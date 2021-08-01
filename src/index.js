@@ -12,9 +12,14 @@ const promptUser = () => {
 };
 
 const createReadmeContent = (inputObject) =>{
-   const { projectName, installation, usage, license, languages, contributionInstructions, tests, email, gitHubUser } = inputObject;
+   const { projectName, installation, usage, license, languages, contributionInstructions, tests, email, gitHubUser, description } = inputObject;
 
     return  `# ${projectName} ${licenses.getLicenseBadge(license)}
+
+## Description
+
+${description}
+
 ## Table of contents
 
 - [Installation](#installation)

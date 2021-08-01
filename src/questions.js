@@ -8,6 +8,11 @@ questions = [
     },
     {
       type: 'input',
+      name: 'description',
+      message: 'Give a description of the project',
+    },
+    {
+      type: 'input',
       name: 'installation',
       message: 'What is the installation?',
     },
