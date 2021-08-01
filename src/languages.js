@@ -1,4 +1,4 @@
-[{
+const languages = [{
    name: "JavaScript",
    badge: `![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)`
 },
@@ -322,3 +322,17 @@
    name: "Quasar",
    badge: `[Quasar](https://img.shields.io/badge/Quasar-16B7FB?style=for-the-badge&logo=quasar&logoColor=black)`
 }]
+
+const getLanguageBadge = languageName => {
+    
+    const foundLanguages = Languages.filter(currentLanguage => languageName === currentLanguage.string);
+    if (foundLanguages){
+        return `${languageName}:  ${foundLanguages[0].badge}`;
+    }
+    return languageName
+}
+
+
+module.exports = {
+   getLanguageBadge: getLanguageBadge
+}
