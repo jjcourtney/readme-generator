@@ -69,18 +69,28 @@ const promptUser = () => {
   ]);
 };
 
+const getLicense = (license) => license === "mit" ? "A mit license" : "Not a mit license";
+
 const createReadmeContent = (inputObject) =>{
    const { projectName, installation, usage, credits, license, badges, features, contributionInstructions, tests } = inputObject;
 
     return  `# ${projectName}
-            ## ${installation}
-            ## ${usage}
-            ## ${credits} 
-            ## ${license}
-            ## ${badges}
-            ## ${features}
-            ## ${contributionInstructions}
-            ## ${tests}`;
+## installation instructions
+${installation}
+## Usage
+${usage}
+## Credits
+${credits} 
+## License 
+${getLicense(license)}
+## Languages / Badges
+${badges}
+## Features
+${features}
+## Instructions for cmaking contributions
+${contributionInstructions}
+## Tests
+${tests}`;
 }
 
 const init = () => {
