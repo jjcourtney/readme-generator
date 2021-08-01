@@ -2,7 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const licenses = require("./licences.js");
-const questions = require("./questions.js")
+const questions = require("./questions.js");
+const languages = require("./languages.js");
+
 
 
 const updateReadme = util.promisify(fs.writeFile);
@@ -12,13 +14,13 @@ const promptUser = () => {
 };
 
 const createReadmeContent = (inputObject) =>{
-   const { projectName, installation, usage, license, languages, contributionInstructions, tests, email, gitHubUser, description } = inputObject;
+   const { projectNameInput, installationInput, usageInput, licenseInput, languagesInput, contributionInstructionsInput, testsInput, emailInput, gitHubUserInput, descriptionInput } = inputObject;
 
-    return  `# ${projectName} ${licenses.getLicenseBadge(license)}
+    return  `# ${projectNameInput} ${licenses.getLicenseBadge(licenseInput)}
 
 ## Description
 
-${description}
+${descriptionInput}
 
 ## Table of contents
 
@@ -31,32 +33,32 @@ ${description}
 - [Tests](#tests)
 
 ## Installation
-\`\`\`${installation}\`\`\`
+\`\`\`${installationInput}\`\`\`
 
 ## Usage
-${usage}
+${usageInput}
 
 ## License 
-This is covered under ${license}: 
-${licenses.getLicenseBadge(license)}
+This is covered under ${licenseInput}: 
+${licenses.getLicenseBadge(licenseInput)}
 
 ## Questions
 
 If you have any questions you can contact me on: 
-${email}
+${emailInput}
 
 my github:
-https://github.com/${gitHubUser}/
+https://github.com/${gitHubUserInput}/
 
 ## Languages
-${languages}
+${languages.getLanguageBadge(languagesInput)}
 
 ## Contributions
 ### Instructions on how to make contributions
-${contributionInstructions}
+${contributionInstructionsInput}
 
 ## Tests
-${tests}`;
+${testsInput}`;
 }
 
 const init = () => {
