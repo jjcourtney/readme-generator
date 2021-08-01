@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const licenses = require("./licences.js")
 
 
 const updateReadme = util.promisify(fs.writeFile);
@@ -17,6 +18,8 @@ Description
 ## How to Contribute
 ## Tests
 */
+
+
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -41,9 +44,10 @@ const promptUser = () => {
       message: 'What is the name contributors?',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
       message: 'What is the license?',
+      choices: licenses.getLicense()
     },
     {
       type: 'input',
@@ -64,31 +68,43 @@ const promptUser = () => {
       type: 'input',
       name: 'tests',
       message: 'What is the tests?',
-    },
+    }
 
   ]);
 };
-
-const getLicense = (license) => license === "mit" ? "A mit license" : "Not a mit license";
 
 const createReadmeContent = (inputObject) =>{
    const { projectName, installation, usage, credits, license, badges, features, contributionInstructions, tests } = inputObject;
 
     return  `# ${projectName}
+## Table of contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
 ## installation instructions
 ${installation}
+
 ## Usage
 ${usage}
+
 ## Credits
 ${credits} 
+
 ## License 
-${getLicense(license)}
+${licenses.getLicenseBadge(license)}
+
 ## Languages / Badges
 ${badges}
+
 ## Features
 ${features}
+
 ## Instructions for cmaking contributions
 ${contributionInstructions}
+
 ## Tests
 ${tests}`;
 }
