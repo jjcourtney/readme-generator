@@ -7,35 +7,23 @@ const questions = require("./questions.js")
 
 const updateReadme = util.promisify(fs.writeFile);
 
-/*
-Description
-## Table of Contents (Optional)
-## Installation
-## Usage
-## Credits
-## License
-## Badges
-## Features
-## How to Contribute
-## Tests
-*/
-
-
-
 const promptUser = () => {
   return inquirer.prompt(questions.getQuestions());
 };
 
 const createReadmeContent = (inputObject) =>{
-   const { projectName, installation, usage, credits, license, badges, features, contributionInstructions, tests } = inputObject;
+   const { projectName, installation, usage, license, languages, contributionInstructions, tests, email, gitHubUser } = inputObject;
 
-    return  `# ${projectName}
+    return  `# ${projectName} ${licenses.getLicenseBadge(license)}
 ## Table of contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [Questions](#questions)
+- [Languages](#languages)
+- [Instructions for making contributions](#Instructions for making contributions)
+- [Tests](#tests)
 
 ## Installation
 ${installation}
@@ -43,19 +31,21 @@ ${installation}
 ## Usage
 ${usage}
 
-## Credits
-${credits} 
-
 ## License 
-${licenses.getLicenseBadge(license)}
+This is covered under ${license}: ${licenses.getLicenseBadge(license)}
 
-## Languages / Badges
-${badges}
+## Questions
 
-## Features
-${features}
+If you have any questions you can contact me on: 
+${email}
 
-## Instructions for cmaking contributions
+my github:
+https://github.com/${gitHubUser}
+
+## Languages
+${languages}
+
+## Instructions for making contributions
 ${contributionInstructions}
 
 ## Tests

@@ -17,11 +17,6 @@ questions = [
       message: 'What is the usage?',
     },
     {
-      type: 'input',
-      name: 'credits',
-      message: 'What is the name contributors?',
-    },
-    {
       type: 'list',
       name: 'license',
       message: 'What is the license?',
@@ -29,24 +24,29 @@ questions = [
     },
     {
       type: 'input',
-      name: 'badges',
-      message: 'What badges?',
-    },
-    {
-      type: 'input',
-      name: 'features',
-      message: 'What are the features?',
+      name: 'languages',
+      message: 'What languages are used?',
     },
     {
       type: 'input',
       name: 'contributionInstructions',
-      message: 'What is the instructions to contribute?',
+      message: 'What are the instructions to contribute?',
     },
     {
       type: 'input',
       name: 'tests',
       message: 'What is the tests?',
-    }
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?',
+    },
+    {
+      type: 'input',
+      name: 'gitHubUser',
+      message: 'What is your github username?',
+    }   
 
   ]
 
