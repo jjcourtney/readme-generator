@@ -22,7 +22,7 @@ const createReadmeContent = (inputObject) =>{
 - [License](#license)
 - [Questions](#questions)
 - [Languages](#languages)
-- [Instructions for making contributions](#Instructions for making contributions)
+- [Instructions for making contributions](#contributions)
 - [Tests](#tests)
 
 ## Installation
@@ -40,12 +40,13 @@ If you have any questions you can contact me on:
 ${email}
 
 my github:
-https://github.com/${gitHubUser}
+https://github.com/${gitHubUser}/
 
 ## Languages
 ${languages}
 
-## Instructions for making contributions
+## Contributions
+### Instructions on how to make contributions
 ${contributionInstructions}
 
 ## Tests
