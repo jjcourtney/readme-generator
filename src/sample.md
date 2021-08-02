@@ -1,4 +1,9 @@
-# Readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Command line readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Description
+
+This can be used to create readme files using the command line
+
 ## Table of contents
 
 - [Installation](#installation)
@@ -10,28 +15,29 @@
 - [Tests](#tests)
 
 ## Installation
-npm i
+```npm i```
 
 ## Usage
-This is a command line readme generator 
+run  ```node index.js``` from the command line in the src file.
 
 ## License 
-This is covered under The MIT License: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This is covered under The MIT License: 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Questions
 
 If you have any questions you can contact me on: 
-asd@da.com
+jcourtneywork@gmail.com
 
 my github:
 https://github.com/jjcourtney/
 
 ## Languages
-JavaScript Node.js
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) | ![NodeJS](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
 
 ## Contributions
 ### Instructions on how to make contributions
-Ask me
+create a fork - update and see questions for my contact details
 
 ## Tests
-None required
+none
