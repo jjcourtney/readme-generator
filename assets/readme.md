@@ -2,7 +2,7 @@
 
 ## Description
 
-Command line readme Generator in node
+Command line readme generator in node
 
 ## Table of contents
 
@@ -18,7 +18,7 @@ Command line readme Generator in node
 ```npm i```
 
 ## Usage
-run ```node index.js``` in the src folder
+run ```node index.js``` from the command line in the src file
 
 ## License 
 This is covered under The MIT License: 
@@ -37,7 +37,7 @@ https://github.com/jjcourtney/
 
 ## Contributions
 ### Instructions on how to make contributions
-Create a fork 
+make a fork
 
 ## Tests
 none

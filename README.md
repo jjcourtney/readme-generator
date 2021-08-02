@@ -51,3 +51,5 @@ create a fork - update and see questions for my contact details
 ## Videos
 
 [Video showing how to run](./assets/readme.mp4) 
+[MD created in video](./assets/readme.md) 
+
