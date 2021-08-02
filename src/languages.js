@@ -323,16 +323,23 @@ const languages = [{
    badge: `[Quasar](https://img.shields.io/badge/Quasar-16B7FB?style=for-the-badge&logo=quasar&logoColor=black)`
 }]
 
+const getLanguage = languagesString => {
+   const badgeArray = []
+   const languagesArray = languagesString.split(" ");
+   languagesArray.forEach(languageInput => badgeArray.push(getLanguageBadge(languageInput)))
+   return badgeArray;
+}
 const getLanguageBadge = languageName => {
     
-    const foundLanguages = Languages.filter(currentLanguage => languageName === currentLanguage.string);
-    if (foundLanguages){
-        return `${languageName}:  ${foundLanguages[0].badge}`;
+    const foundLanguage = languages.filter(currentLanguage => languageName.toLowerCase() === (currentLanguage.name).toLowerCase());
+
+    if (Array.isArray(foundLanguage) && foundLanguage.length > 0){
+        return foundLanguage[0].badge
     }
     return languageName
 }
 
 
 module.exports = {
-   getLanguageBadge: getLanguageBadge
+   getLanguage: getLanguage
 }

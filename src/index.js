@@ -33,7 +33,7 @@ ${descriptionInput}
 - [Tests](#tests)
 
 ## Installation
-\`\`\`${installationInput}\`\`\`
+\`\`\`${installationInput ? installationInput : "|"}\`\`\`
 
 ## Usage
 ${usageInput}
@@ -51,7 +51,7 @@ my github:
 https://github.com/${gitHubUserInput}/
 
 ## Languages
-${languages.getLanguageBadge(languagesInput)}
+${languages.getLanguage(languagesInput).join(" | ")}
 
 ## Contributions
 ### Instructions on how to make contributions
