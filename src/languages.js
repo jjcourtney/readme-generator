@@ -326,9 +326,16 @@ const languages = [{
 const getLanguage = languagesString => {
    const badgeArray = []
    const languagesArray = languagesString.split(" ");
-   languagesArray.forEach(languageInput => badgeArray.push(getLanguageBadge(languageInput)))
+
+   languagesArray.forEach(languageInput => {
+      if (languageInput){
+         badgeArray.push(getLanguageBadge(languageInput))
+      }
+   })
+  
    return badgeArray;
 }
+
 const getLanguageBadge = languageName => {
     
     const foundLanguage = languages.filter(currentLanguage => languageName.toLowerCase() === (currentLanguage.name).toLowerCase());
