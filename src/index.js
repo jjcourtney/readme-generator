@@ -31,7 +31,7 @@ ${descriptionInput}
 - [Tests](#tests)
 
 ## Installation
-\`\`\`${installationInput ? installationInput : "|"}\`\`\`
+\`\`\`${installationInput ? installationInput : "none"}\`\`\`
 
 ## Usage
 ${usageInput}
