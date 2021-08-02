@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jjcourtney/readme-generator#readme",
   "dependencies": {
+    "fetch": "^1.1.0",
     "inquirer": "^8.1.2"
   },
   "devDependencies": {}
