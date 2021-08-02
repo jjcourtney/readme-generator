@@ -5,18 +5,16 @@ const licenses = require("./licences.js");
 const questions = require("./questions.js");
 const languages = require("./languages.js");
 
-
-
 const updateReadme = util.promisify(fs.writeFile);
 
 const promptUser = () => {
   return inquirer.prompt(questions.getQuestions());
 };
 
-const createReadmeContent = (inputObject) =>{
-   const { projectNameInput, installationInput, usageInput, licenseInput, languagesInput, contributionInstructionsInput, testsInput, emailInput, gitHubUserInput, descriptionInput } = inputObject;
+const createReadmeContent = (inputObject) => {
+  const { projectNameInput, installationInput, usageInput, licenseInput, languagesInput, contributionInstructionsInput, testsInput, emailInput, gitHubUserInput, descriptionInput } = inputObject;
 
-    return  `# ${projectNameInput} ${licenses.getLicenseBadge(licenseInput)}
+  return `# ${projectNameInput} ${licenses.getLicenseBadge(licenseInput)}
 
 ## Description
 
@@ -63,7 +61,7 @@ ${testsInput}`;
 
 const init = () => {
   promptUser()
-    .then((userInput) => updateReadme ('readme.md', createReadmeContent(userInput)))
+    .then((userInput) => updateReadme('readme.md', createReadmeContent(userInput)))
     .catch((error) => console.error(error));
 };
 
